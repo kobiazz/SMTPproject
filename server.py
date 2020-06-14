@@ -3,8 +3,6 @@ from tkinter import filedialog
 from flask import Flask, request, render_template
 import subprocess
 import time
-from tkinter import *
-import tkinter as ttk
 import os
 import email, smtplib, ssl
 from email import encoders
