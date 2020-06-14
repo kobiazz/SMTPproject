@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>Project-X</title>
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            position: relative;
+            width: 311px;
+            margin:310px auto;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+        #exe {
+            margin: 1px;
+            position: relative;
+            left: 55px;
+            width: 32%;
+        }
+        #brow {
+            position: relative;
+            padding: 2px;
+            top: -2px;
+        }
+    </style>
+    <div class="container">
+            <div class="input-group">
+                <div class="col-xs-2">
+                    <form action="/browse" method="POST">
+                        <span class="input-group-addon"><i class='far fa-envelope'></i></span>
+                        <input id="email" type="email" name="email" placeholder="Email" value={{email}}>
+                        <br>
+                        <i class="far fa-folder"></i>
+                        <input name="x" placeholder="Path" value={{path}}>
+                        <input id="brow" class="btn btn-success" type="submit" value="Browse ⮯">
+                    </form>
+                </div>
+            </div>
+            <form action="/execute" method="POST">
+                <input id="exe" class="btn btn-primary" type="submit" onclick="closeW()" value="Execute ⏎">
+            </form>
+    </div>
+    <script>
+        function closeW() {
+            myWindows.close();
+    }
+    </script>
+</body>
+</html>
